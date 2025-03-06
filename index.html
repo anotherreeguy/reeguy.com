@@ -16,8 +16,8 @@
         body {
             font-family: 'Futura', sans-serif; /* Use Futura as the primary font */
             line-height: 1.6;
-            color: #111; /* Darker font color */
-            background: #f9f9f9;
+            color: #fff; /* Light text color */
+            background: #333; /* Darker background color */
         }
 
         .container {
@@ -44,7 +44,7 @@
 
         p {
             margin-bottom: 20px;
-            color: #666;
+            color: #ddd; /* Light grey text color */
         }
 
         .btn {
@@ -85,9 +85,16 @@
             text-align: center;
             color: #fff;
             border-radius: 10px 10px 0 0;
-            background: linear-gradient(to right, #4CAF50, #45a049);
+            background: linear-gradient(to right, #333, #222); /* Darker gradient */
             position: relative;
             animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero h1 {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker box behind the text */
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 8px;
         }
 
         /* Fade-in animation */
@@ -144,13 +151,4 @@
         document.addEventListener('keypress', function(event) {
             typedText += event.key.toLowerCase();
             if (typedText.includes(secretText)) {
-                document.querySelectorAll('h1, h2, p, li, a').forEach(element => {
-                    element.innerText = newText;
-                });
-                typedText = '';
-                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', ':D', 'width=600,height=400');
-            }
-        });
-    </script>
-</body>
-</html>
+                document
