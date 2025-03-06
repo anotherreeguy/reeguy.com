@@ -16,17 +16,17 @@
         body {
             font-family: 'Futura', sans-serif; /* Use Futura as the primary font */
             line-height: 1.6;
-            color: #fff; /* Light text color */
-            background: #333; /* Darker background color */
+            color: #ddd; /* Light text color for dark theme */
+            background: #121212; /* Dark background */
         }
 
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #1f1f1f; /* Dark container background */
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         }
 
         h2, h1 {
@@ -35,22 +35,22 @@
         }
 
         h2 {
-            color: #4CAF50;
+            color: #4CAF50; /* Green for h2 */
         }
 
         h1 {
-            color: #fff;
+            color: #fff; /* White text color for heading */
         }
 
         p {
             margin-bottom: 20px;
-            color: #ddd; /* Light grey text color */
+            color: #bbb; /* Lighter text color for paragraphs */
         }
 
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Green button */
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -76,7 +76,7 @@
         }
 
         .social-link:hover {
-            color: #4CAF50;
+            color: #4CAF50; /* Green hover color for links */
         }
 
         /* Hero Section */
@@ -91,7 +91,7 @@
         }
 
         .hero h1 {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker box behind the text */
+            background-color: rgba(0, 0, 0, 0.7); /* Dark box behind the text */
             display: inline-block;
             padding: 20px 40px;
             border-radius: 8px;
@@ -151,4 +151,13 @@
         document.addEventListener('keypress', function(event) {
             typedText += event.key.toLowerCase();
             if (typedText.includes(secretText)) {
-                document
+                document.querySelectorAll('h1, h2, p, li, a').forEach(element => {
+                    element.innerText = newText;
+                });
+                typedText = '';
+                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', ':D', 'width=600,height=400');
+            }
+        });
+    </script>
+</body>
+</html>
